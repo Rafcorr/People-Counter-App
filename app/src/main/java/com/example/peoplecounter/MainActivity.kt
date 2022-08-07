@@ -14,12 +14,16 @@ class MainActivity : AppCompatActivity() {
         val addButton = findViewById<Button>(R.id.add_btn)
         val removeButton = findViewById<Button>(R.id.remove_btn)
 
+        var timesClicked = 0
+
         addButton.setOnClickListener {
-            textView.text = "Add button clicked"
+            timesClicked++
+            textView.text = timesClicked.toString()
         }
 
         removeButton.setOnClickListener {
-            textView.text = "Remove button clicked"
+            timesClicked--
+            textView.text = timesClicked.toString()
         }
     }
 }
